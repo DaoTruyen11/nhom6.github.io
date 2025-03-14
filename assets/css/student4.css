@@ -1,94 +1,132 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --border-color: #e0e0e0;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-color);
     background-color: #f5f5f5;
-    color: #333;
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
 }
 
-.profile-header {
+.profile {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 30px;
 }
 
 .profile-img {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #3498db;
+    border: 4px solid var(--secondary-color);
     margin-right: 30px;
 }
 
 .profile-info h1 {
-    margin: 0;
-    color: #2c3e50;
-    font-size: 28px;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
 }
 
 .profile-info p {
-    margin: 5px 0;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .contact-info {
-    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .contact-info p {
-    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 .section {
     margin-bottom: 30px;
 }
 
-h2 {
-    color: #2c3e50;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    font-size: 20px;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.info-item {
-    margin-bottom: 5px;
-}
-
-.info-label {
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.education-item, .project-item, .achievement-item {
+.section-title {
+    position: relative;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    padding-bottom: 10px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
-.education-title, .project-title {
-    font-weight: bold;
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.goal-section {
+    margin-bottom: 15px;
+}
+
+.goal-title {
+    font-weight: 600;
+    color: var(--secondary-color);
     margin-bottom: 5px;
-    color: #2c3e50;
+}
+
+.education-item {
+    margin-bottom: 15px;
+}
+
+.education-title {
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .date {
-    color: #3498db;
-    font-size: 14px;
-    margin-bottom: 5px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin: 5px 0;
 }
 
 .skills-grid {
@@ -102,33 +140,65 @@ h2 {
 }
 
 .skill-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #2c3e50;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
 }
 
 .skill-list {
     list-style-type: none;
-    padding-left: 0;
-    margin: 0;
 }
 
 .skill-list li {
+    padding: 5px 0;
     position: relative;
-    padding-left: 15px;
-    margin-bottom: 5px;
+    padding-left: 20px;
 }
 
 .skill-list li::before {
     content: "•";
+    color: var(--secondary-color);
     position: absolute;
     left: 0;
-    color: #3498db;
+    font-weight: bold;
+}
+
+.project-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.tech-stack {
+    margin: 10px 0;
+}
+
+.tech {
+    display: inline-block;
+    background-color: var(--light-bg);
+    color: var(--secondary-color);
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid var(--border-color);
 }
 
 .responsibilities {
     list-style-type: none;
-    padding-left: 0;
+    margin-top: 8px;
+    padding-left: 20px;
 }
 
 .responsibilities li {
@@ -138,67 +208,48 @@ h2 {
 }
 
 .responsibilities li::before {
-    content: "•";
+    content: "→";
     position: absolute;
     left: 0;
-    color: #3498db;
-}
-
-.tech-stack {
-    margin: 10px 0;
-}
-
-.tech {
-    display: inline-block;
-    background-color: #f0f8ff;
-    border: 1px solid #d1e6fa;
-    padding: 3px 8px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    font-size: 14px;
+    color: var(--secondary-color);
 }
 
 .interests {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 10px;
 }
 
 .interest-tag {
-    padding: 5px 15px;
-    background-color: #f0f8ff;
-    border: 1px solid #d1e6fa;
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    padding: 6px 15px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 0.9rem;
+    display: inline-block;
+    border: 1px solid var(--border-color);
 }
 
-.goal-section {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-left: 3px solid #3498db;
-    margin-bottom: 20px;
-}
-
-.goal-title {
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 600px) {
-    .profile-header {
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .profile {
         flex-direction: column;
         text-align: center;
     }
     
     .profile-img {
         margin-right: 0;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     
-    .info-grid, .skills-grid {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
         grid-template-columns: 1fr;
     }
 }
