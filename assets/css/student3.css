@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+.title {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #3498db;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-item {
+    margin-bottom: 5px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.education-item, .project-item, .achievement-item {
+    margin-bottom: 20px;
+}
+
+.education-title, .project-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.date {
+    color: #3498db;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-category {
+    margin-bottom: 15px;
+}
+
+.skill-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.skill-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+.skill-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.responsibilities {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.responsibilities li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+.responsibilities li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.tech-stack {
+    margin: 10px 0;
+}
+
+.tech {
+    display: inline-block;
+    background-color: #f0f8ff;
+    border: 1px solid #d1e6fa;
+    padding: 3px 8px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.achievements {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.achievements li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.achievements li::before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 600px) {
+    .info-grid, .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}

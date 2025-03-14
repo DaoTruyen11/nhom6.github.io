@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #3498db;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.profile-info h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.objective {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 3px solid #3498db;
+    margin-bottom: 20px;
+}
+
+.objective ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.objective li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.objective li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.achievements {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.achievements li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+}
+
+.achievements li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skill-tag {
+    padding: 5px 15px;
+    background-color: #e0f2ff;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #2980b9;
+    border: 1px solid #bce0fd;
+}
+
+.project-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.project-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.tech-stack {
+    margin: 10px 0;
+}
+
+.tech {
+    display: inline-block;
+    background-color: #e0f2ff;
+    border: 1px solid #bce0fd;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #2980b9;
+}
+
+.activities-item {
+    margin-bottom: 15px;
+}
+
+.activities-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.activities-desc {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.activities-desc li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+.activities-desc li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
